@@ -20,7 +20,7 @@ function Contacto() {
             </li>
             <li>
               <span className="icono-contacto"><FiMail /></span>
-              <a href="mailto:servicios@inmerza.com">servicios@inmerza.com</a>
+              <a href="mailto:contacto@inmerza.com">contacto@inmerza.com</a>
             </li>
             <li>
               <span className="icono-contacto"><FaWhatsapp /></span>

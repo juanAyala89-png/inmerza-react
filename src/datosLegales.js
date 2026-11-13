@@ -7,7 +7,7 @@ const datosLegales = {
   razonSocial: "Inmerza Seguridad Industrial, S.A. de C.V.",
   rfc: "ISI250101AB1", // RFC de prueba
   domicilio: "Tlaxcantla, Tepetlaoxtoc de Hidalgo, Estado de México, C.P. 56070",
-  correo: "servicios@inmerza.com",
+  correo: "contacto@inmerza.com",
   telefono: "81 2441 7380",
   sitioWeb: "www.inmerza.com",
   // Fecha de la última vez que se modificaron los documentos legales
