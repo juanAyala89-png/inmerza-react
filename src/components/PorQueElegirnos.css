@@ -1,0 +1,59 @@
+/* --- SECCIÓN POR QUÉ ELEGIRNOS --- */
+.elegirnos {
+  padding: 80px 20px;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+.grid-elegirnos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.item-elegirnos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  background: var(--gris-tarjeta);
+  border-radius: 8px;
+}
+
+.icono-elegirnos {
+  font-size: 40px;
+  color: var(--naranja);
+  flex-shrink: 0;
+  display: flex;
+}
+
+.item-elegirnos h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--azul);
+}
+
+.item-elegirnos p {
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--gris-texto);
+}
+
+/* RESPONSIVO EN CELULARES: 1 tarjeta por fila */
+@media screen and (max-width: 768px) {
+  .elegirnos {
+    padding: 60px 20px;
+  }
+
+  .grid-elegirnos {
+    grid-template-columns: 1fr;
+  }
+
+  .item-elegirnos {
+    padding: 22px;
+    gap: 18px;
+  }
+}

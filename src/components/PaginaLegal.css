@@ -1,0 +1,81 @@
+/* --- PÁGINAS LEGALES (Términos y Aviso de privacidad) --- */
+.pagina-legal {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 130px 20px 80px;
+  color: var(--azul);
+}
+
+.volver-inicio {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--naranja);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.volver-inicio:hover {
+  text-decoration: underline;
+}
+
+.titulo-legal {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.fecha-legal {
+  margin: 0 0 32px;
+  font-size: 14px;
+  color: var(--gris-texto);
+}
+
+.contenido-legal h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 32px 0 12px;
+  color: var(--azul);
+}
+
+.contenido-legal p,
+.contenido-legal li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gris-texto);
+}
+
+.contenido-legal ul {
+  padding-left: 22px;
+}
+
+.contenido-legal a {
+  color: var(--naranja);
+}
+
+/* Recuadro con los datos de la empresa */
+.recuadro-legal {
+  background: var(--gris-claro);
+  border-left: 4px solid var(--naranja);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.recuadro-legal p {
+  margin: 4px 0;
+}
+
+/* RESPONSIVO EN CELULARES */
+@media screen and (max-width: 600px) {
+  .pagina-legal {
+    padding-top: 110px;
+  }
+
+  .titulo-legal {
+    font-size: 28px;
+  }
+
+  .contenido-legal h2 {
+    font-size: 19px;
+  }
+}

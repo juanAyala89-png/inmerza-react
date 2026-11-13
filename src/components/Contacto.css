@@ -1,0 +1,222 @@
+/* --- SECCIÓN CONTACTO --- */
+.contacto {
+  padding: 40px 20px 90px;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+/* En el diseño el título de esta sección va todo en naranja */
+.titulo-naranja {
+  color: var(--naranja);
+}
+
+.grid-contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.tarjeta-contacto {
+  background: var(--blanco);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-contacto h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--azul);
+}
+
+/* Lista con teléfono, correo y WhatsApp */
+.lista-contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lista-contacto li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lista-contacto a {
+  color: var(--gris-texto);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.lista-contacto a:hover {
+  color: var(--naranja);
+}
+
+.icono-contacto {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--naranja);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.texto-rapido {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--gris-texto);
+  margin: -6px 0 20px;
+}
+
+/* Botón naranja ancho (Llamar ahora y Enviar mensaje) */
+.btn-naranja {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--naranja);
+  color: var(--blanco);
+  font-family: var(--fuente);
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-naranja:hover {
+  background: var(--naranja-hover);
+}
+
+.btn-naranja:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* --- FORMULARIO --- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--gris-claro);
+  font-family: var(--fuente);
+  font-size: 15px;
+  color: var(--azul);
+  outline: none;
+  resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: var(--naranja);
+  background: var(--blanco);
+}
+
+/* Campo marcado cuando falta información */
+.formulario .con-error {
+  border-color: #dc2626;
+}
+
+/* Casilla para aceptar el Aviso de privacidad */
+.casilla-acepta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--gris-texto);
+  cursor: pointer;
+}
+
+.formulario .casilla-acepta input {
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  padding: 0;
+  flex-shrink: 0;
+  accent-color: var(--naranja);
+  cursor: pointer;
+}
+
+.casilla-acepta a {
+  color: var(--naranja);
+}
+
+.mensaje-error {
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.aviso {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.aviso-exito {
+  background: #e5f4e4;
+  color: #1e6b2c;
+}
+
+.aviso-error {
+  background: #fbebeb;
+  color: #b42318;
+}
+
+/* RESPONSIVO EN TABLETA Y CELULAR */
+@media screen and (max-width: 860px) {
+  .grid-contacto {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tarjeta-contacto {
+    padding: 22px;
+  }
+
+  .tarjeta-contacto h3 {
+    font-size: 22px;
+  }
+
+  .fila-campos {
+    grid-template-columns: 1fr;
+  }
+}

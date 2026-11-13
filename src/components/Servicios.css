@@ -1,0 +1,95 @@
+/* --- SECCIÓN SERVICIOS --- */
+.servicios {
+  background-color: var(--azul);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* En esta sección el título va en blanco por el fondo azul */
+.servicios .titulo-seccion {
+  color: var(--blanco);
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--ancho-max);
+  margin: 40px auto;
+}
+
+.tarjeta-servicio {
+  background: var(--gris-tarjeta);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta-servicio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-contenido {
+  padding: 20px 22px 24px;
+}
+
+.tarjeta-servicio h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--azul);
+}
+
+.tarjeta-servicio ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.tarjeta-servicio li {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: var(--azul);
+}
+
+.cotiza-container {
+  margin-top: 30px;
+}
+
+/* RESPONSIVO EN TABLETA: 2 tarjetas por fila */
+@media screen and (max-width: 1024px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La tercera tarjeta se centra para que no quede sola a la izquierda */
+  .tarjeta-servicio:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12px);
+  }
+}
+
+/* RESPONSIVO EN CELULARES: 1 tarjeta por fila */
+@media screen and (max-width: 640px) {
+  .servicios {
+    padding: 60px 20px;
+  }
+
+  .grid-servicios {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .tarjeta-servicio:last-child:nth-child(odd) {
+    width: 100%;
+  }
+}

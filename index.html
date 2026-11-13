@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Inmerza: soluciones integrales en seguridad e higiene industrial, brigadas de emergencia, venta de equipo y proyectos de ingeniería."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Tipografía del diseño de Figma -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Inmerza | Seguridad e higiene industrial</title>
+  </head>
+  <body>
+    <!--
+      Formulario oculto para Netlify Forms.
+      Netlify lo detecta al publicar el sitio y así puede recibir
+      los mensajes que se envían desde el componente Formulario.js
+    -->
+    <form name="contacto" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nombre" />
+      <input type="text" name="empresa" />
+      <input type="tel" name="telefono" />
+      <input type="email" name="correo" />
+      <textarea name="mensaje"></textarea>
+      <input type="text" name="acepta" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

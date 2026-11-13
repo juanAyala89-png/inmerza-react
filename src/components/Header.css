@@ -1,0 +1,118 @@
+/* --- NAVBAR --- */
+.navbar-container {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.navbar-box {
+  position: relative;
+  background: #e4e4e4b2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: var(--ancho-max);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+  width: 131px;
+  height: auto;
+}
+
+.nav-botones {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-botones a {
+  text-decoration: none;
+  color: #1d2b4b;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-botones a:hover {
+  color: var(--naranja);
+}
+
+.btn-nav-contacto {
+  background-color: var(--naranja);
+  color: white !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+}
+
+.btn-nav-contacto:hover {
+  background-color: var(--naranja-hover);
+}
+
+/* Botón de menú (solo se ve en celular y tableta) */
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--azul);
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* RESPONSIVO EN TABLETA Y CELULAR */
+@media screen and (max-width: 900px) {
+  .navbar-container {
+    top: 16px;
+  }
+
+  .navbar-box {
+    width: 92%;
+  }
+
+  .btn-menu {
+    display: flex;
+  }
+
+  /* El menú se vuelve una lista que baja debajo de la barra */
+  .nav-botones {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px;
+    background: #f4f4f4;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .nav-botones.abierto {
+    display: flex;
+  }
+
+  .nav-botones a {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  .btn-nav-contacto {
+    text-align: center;
+  }
+}

@@ -1,0 +1,96 @@
+/* --- COLORES Y TIPOGRAFÍA DEL DISEÑO (Figma) --- */
+:root {
+  --azul: #1a2b4b;
+  --naranja: #ea6128;
+  --naranja-hover: #d4521c;
+  --blanco: #ffffff;
+  --gris-claro: #f1f3f5;
+  --gris-tarjeta: #e4e4e4;
+  --gris-texto: #6b7280;
+  --fuente: "Roboto Flex", sans-serif;
+  --ancho-max: 1140px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--azul);
+  background-color: var(--blanco);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Para que el menú fijo no tape el título al dar clic en un enlace */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+.titulo-seccion {
+  font-size: 44px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--azul);
+}
+
+.titulo-seccion span {
+  color: var(--naranja);
+}
+
+/* --- BOTONES --- */
+.btn-servicios,
+.btn-contacto {
+  font-family: var(--fuente);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-servicios {
+  border-color: #f4f4f4;
+  color: #f4f4f4;
+  background: transparent;
+}
+
+.btn-servicios:hover {
+  background: #f4f4f4;
+  color: var(--azul);
+}
+
+.btn-contacto {
+  border-color: var(--naranja);
+  color: #f4f4f4;
+  background: var(--naranja);
+}
+
+.btn-contacto:hover {
+  background: var(--naranja-hover);
+  border-color: var(--naranja-hover);
+}
+
+/* RESPONSIVO EN CELULARES */
+@media screen and (max-width: 768px) {
+  .titulo-seccion {
+    font-size: 32px;
+  }
+}

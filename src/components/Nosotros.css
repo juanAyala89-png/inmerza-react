@@ -1,0 +1,89 @@
+/* --- SECCIÓN SOMOS, MISIÓN Y VISIÓN --- */
+.seccion-somos {
+  background-color: #ffffff;
+  color: var(--azul);
+  padding: 90px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+}
+
+.descripcion-somos {
+  text-align: center;
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 50px;
+}
+
+/* Flexbox para colocar Imagen al lado de Texto */
+.bloque-filas {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.columna-imagen,
+.columna-texto {
+  flex: 1;
+}
+
+.columna-imagen img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.columna-texto h3 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: var(--azul);
+}
+
+.columna-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gris-texto);
+  margin: 0;
+}
+
+/* En el diseño el texto de la Visión va alineado a la derecha */
+.texto-derecha {
+  text-align: right;
+}
+
+/* RESPONSIVO EN CELULARES */
+@media screen and (max-width: 768px) {
+  .seccion-somos {
+    padding: 70px 20px 20px;
+  }
+
+  .descripcion-somos {
+    font-size: 16px;
+  }
+
+  .bloque-filas {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bloque-filas.reverso {
+    flex-direction: column-reverse; /* Mantiene orden visual en celular */
+  }
+
+  .columna-texto,
+  .texto-derecha {
+    text-align: center;
+  }
+
+  .columna-texto h3 {
+    font-size: 28px;
+  }
+}
